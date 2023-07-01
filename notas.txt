@@ -1,1 +1,7 @@
-Nombre base de datos: elgranbigote
+Nombre base de datos: No la he creado aún, en laconfiguración de php va sin nombre de base de datos, solo usuario y clave "root"
+
+npm run dev *en VS code
+php -S localhost:3000 *en powershell
+composer update *en powershell
+
+Servidor: http://localhost:3000/

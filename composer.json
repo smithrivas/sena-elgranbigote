@@ -1,0 +1,19 @@
+{
+    "name": "brayan/sena-app-el-gran-bigote",
+    "description": "Proyecto SENA PHP, MVC, SQL, SASS, Gulp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "Brayan",
+            "email": "smithrivas.dev@gmail.com"
+        }
+    ],
+    "require": {}
+}

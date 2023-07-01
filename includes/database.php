@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '', 'elgranbigote');
+$db = mysqli_connect('localhost', 'root', 'root', '');
 
 
 if (!$db) {
