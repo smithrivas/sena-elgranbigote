@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="https://i.imgur.com/zoktvl7.png" type="image/x-icon">
     <title>El gran bigote</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
 
