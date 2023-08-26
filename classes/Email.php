@@ -20,11 +20,11 @@ class Email{
         // Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->Host = $_ENV['EMAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = 'b019ff5aee9b07';
-        $mail->Password = '60b4ac6bcb069a';
+        $mail->Port = $_ENV['EMAIL_PORT'];
+        $mail->Username = $_ENV['EMAIL_USER'];
+        $mail->Password = $_ENV['EMAIL_PASS'];
 
         $mail->setFrom('cuentas@appsalon.com');
         $mail->addAddress('cuentas@appsalon.com','AppSalon.com');
@@ -36,7 +36,7 @@ class Email{
 
         $contenido = "<html>";
         $contenido .= "<p>Hola <strong>".$this->nombre."</strong> has creado tu cuenta en la barberia <strong>El gran bigote,</strong> solo debes confirmarla presionando el siguiente enlace:</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=".$this->token."'>Confirmar cuenta</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='".$_ENV['APP_URL']."/confirmar-cuenta?token=".$this->token."'>Confirmar cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
 
@@ -49,12 +49,12 @@ class Email{
     public function enviarInstrucciones(){
          // Crear el objeto de email
          $mail = new PHPMailer();
-         $mail->isSMTP();
-         $mail->Host = 'sandbox.smtp.mailtrap.io';
-         $mail->SMTPAuth = true;
-         $mail->Port = 2525;
-         $mail->Username = 'b019ff5aee9b07';
-         $mail->Password = '60b4ac6bcb069a';
+        $mail->isSMTP();
+        $mail->Host = $_ENV['EMAIL_HOST'];
+        $mail->SMTPAuth = true;
+        $mail->Port = $_ENV['EMAIL_PORT'];
+        $mail->Username = $_ENV['EMAIL_USER'];
+        $mail->Password = $_ENV['EMAIL_PASS'];
  
          $mail->setFrom('cuentas@appsalon.com');
          $mail->addAddress('cuentas@appsalon.com','AppSalon.com');
@@ -66,7 +66,7 @@ class Email{
  
          $contenido = "<html>";
          $contenido .= "<p>Hola <strong>".$this->nombre."</strong> has solicitado restablecer tu contraseña, da click en el siguiente enlace para crear una nueva:</p>";
-         $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/recuperar?token=".$this->token."'>Restablecer contraseña</a></p>";
+         $contenido .= "<p>Presiona aquí: <a href='".$_ENV['APP_URL']."/recuperar?token=".$this->token."'>Restablecer contraseña</a></p>";
          $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
          $contenido .= "</html>";
  
